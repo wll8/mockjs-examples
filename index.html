@@ -9,7 +9,7 @@
     <script>
         require.config({
             paths: {
-                mock: 'dist/mock'
+                mock: 'bower_components/mockjs/dist/mock.js'
             }
         })
         require(['mock'], function(Mock) {
@@ -25,7 +25,7 @@
         <div class="container">
             <a href="./">首页 <!-- Home --></a>
             <a href="https://github.com/nuysoft/Mock/wiki" target="_blank">文档 <!-- Docs --></a>
-            <a href="./examples.html">示例 <!-- Examples --></a>
+            <a href="./index.html">示例 <!-- Examples --></a>
             <a href="https://github.com/nuysoft/Mock/tree/refactoring" target="_blank">代码 <!-- Code --></a>
         </div>
     </div>
@@ -109,7 +109,7 @@
                                 <div class="col-sm-6">
                                     <div class="result">
                                         <span class="badge">Result</span>
-                                        <div v-if="signature === 'Random.dataImage( size?, text? )' || 
+                                        <div v-if="signature === 'Random.dataImage( size?, text? )' ||
                                                 signature === 'Random.image( size?, background?, foreground?, format?, text? )'">
                                             {{{ demos | examples.dpd.img }}}
                                         </div>
@@ -128,7 +128,7 @@
         </div>
     </script>
     <div id="examples" class="container definition"></div>
-    
+
     <script src="./config.js"></script>
     <script>
         // require(['./assets/js/test.dtd'])
@@ -136,10 +136,10 @@
         require(['./assets/js/examples'])
     </script>
     <link rel="stylesheet" href="./bower_components/highlightjs/styles/github.css"><!-- github -->
-    
+
     <!-- <script src="./bower_components/highlightjs/highlight.pack.js"></script> -->
     <!-- <script src="../dist/mock.js"></script> -->
-    
+
     <!-- <script src="./site.test.template.js"></script> -->
     <!-- <script src="./site.test.dtd.js"></script> -->
     <!-- <script src="./site.test.dpd.js"></script> -->
