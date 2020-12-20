@@ -9,7 +9,7 @@
     <script>
         require.config({
             paths: {
-                mock: 'bower_components/mockjs/dist/mock.js'
+                mock: 'bower_components/mockjs/dist/mock'
             }
         })
         require(['mock'], function(Mock) {
@@ -21,14 +21,6 @@
     <!-- https://www.uservoice.com/ -->
 </head>
 <body>
-    <div class="examples-nav">
-        <div class="container">
-            <a href="./">首页 <!-- Home --></a>
-            <a href="https://github.com/nuysoft/Mock/wiki" target="_blank">文档 <!-- Docs --></a>
-            <a href="./index.html">示例 <!-- Examples --></a>
-            <a href="https://github.com/nuysoft/Mock/tree/refactoring" target="_blank">代码 <!-- Code --></a>
-        </div>
-    </div>
     <div class="container" style="padding: 20px; margin-bottom: 20px;">
         <span class="fontsize-20">示例</span>
         <!-- <h1>Examples: Syntax Specification</h1> -->
@@ -37,15 +29,15 @@
         <div class="row">
             <div class="col-sm-2">
                 <div class="mb10">
-                    <a href="#DPD" class="fontsize-16" data-scroll>数据模板定义<!-- Data Template Definition, DTD --></a>
+                    <a href="#DPD" class="fontsize-16">数据模板定义<!-- Data Template Definition, DTD --></a>
                 </div>
                 <ul class="catalog">
                     <li v-for="(type, item) in DTD">
-                        <div><a href="#{{ type }}" data-scroll>{{ type }}</a></div>
+                        <div><a href="#{{ type }}">{{ type }}</a></div>
                     </li>
                 </ul>
                 <div class="mb10">
-                    <a href="#DPD" class="fontsize-16" data-scroll>数据占位符定义 <!-- Data Placeholder Definition, DPD --></a>
+                    <a href="#DPD" class="fontsize-16">数据占位符定义 <!-- Data Placeholder Definition, DPD --></a>
                 </div>
                 <ul class="catalog">
                     <li v-for="(type, methods) in DPD">
@@ -53,7 +45,7 @@
                             <a href="#{{ type }}">{{ type }}</a>
                         </div>
                         <div v-for="(method, demos) in methods">
-                            <a href="#{{ method }}" data-scroll> {{ method.slice(7).split('(')[0] }} </a>
+                            <a href="#{{ method }}"> {{ method.slice(7).split('(')[0] }} </a>
                         </div>
                     </li>
                 </ul>
